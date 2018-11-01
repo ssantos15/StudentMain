@@ -48,12 +48,12 @@ public class Student
         String chosenClass = "CSC110";
         if(CSC142) chosenClass = "CSC142";
         if(CSC143) chosenClass = "CSC143";
-        String str = "Student Name: " + firstName + " " + lastName + "\n";
+        String str = "The Name: " + firstName + " " + lastName + "\n";
         str += "ID: " + id + "\n";
         str += "The chosen class: " + chosenClass + "\n";
         str += "Credits: " + Department.NUM_CREDITS + "\n";
         str += "Credit Price: " + Department.COST_CREDIT + "\n";
-        str += "Total Balance: " + String.format("$%.2f", getBalance()) + "\n";
+        str += "The Balance: " + String.format("$%.2f", getBalance()) + "\n";
         return str;
     }
     public void setFirstName(String firstName) {
@@ -99,16 +99,16 @@ public class Student
     }
     public static void test() {
         Student testStudent = new Student("Steve", "Santos", "150817");
-        if(testStudent.getFirstName() != "Steve") System.out.println("ID should be Bobo, but was " + testStudent.getFirstName());
-        if(testStudent.getLastName() != "Santos") System.out.println("ID should be Chew, but was " + testStudent.getLastName());
-        if(testStudent.getID() != "150817") System.out.println("ID should be 12345, but was " + testStudent.getID());
+        if(testStudent.getFirstName() != "Steve") System.out.println("ID should be Steve, but was " + testStudent.getFirstName());
+        if(testStudent.getLastName() != "Santos") System.out.println("ID should be Santos, but was " + testStudent.getLastName());
+        if(testStudent.getID() != "150817") System.out.println("ID should be 150817, but was " + testStudent.getID());
         if(testStudent.getCSC110()) System.out.println("CSC110 should be false, but was " + testStudent.getCSC110());
         if(testStudent.getCSC142()) System.out.println("CSC142 should be false, but was " + testStudent.getCSC142());
         if(testStudent.getCSC143()) System.out.println("CSC143 should be false, but was " + testStudent.getCSC143());
         if(testStudent.getBalance() != 0.0) System.out.println("Balance should be $0.00, but was " + String.format("$%.2f", testStudent.getBalance()));
         Student testStudent2 = new Student("Jeff", "Bezos", "950629671", false, true, false);
-        if(testStudent2.getFirstName() != "Jeff") System.out.println("ID should be Nick, but was " + testStudent.getFirstName());
-        if(testStudent2.getLastName() != "Bezos") System.out.println("ID should be Coyle, but was " + testStudent.getLastName());
+        if(testStudent2.getFirstName() != "Jeff") System.out.println("ID should be Jeff, but was " + testStudent.getFirstName());
+        if(testStudent2.getLastName() != "Bezos") System.out.println("ID should be Bezos, but was " + testStudent.getLastName());
         if(testStudent2.getID() != "950629671") System.out.println("ID should be 950629671, but was " + testStudent.getID());
         if(testStudent2.getCSC110()) System.out.println("CSC110 should be false, but was " + testStudent.getCSC110());
         if(!testStudent2.getCSC142()) System.out.println("CSC142 should be true, but was " + testStudent.getCSC142());
